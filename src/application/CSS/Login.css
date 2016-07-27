@@ -1,0 +1,31 @@
+#root {
+        -fx-background-color:  linear-gradient(lightgray, gray);
+        -fx-border-color: white;
+        -fx-border-radius: 20;
+        -fx-padding: 10 10 10 10;
+        -fx-background-radius: 20;
+
+}
+
+#bp {
+        -fx-background-color:  linear-gradient(gray,DimGrey );
+        -fx-border-radius: 20;
+        -fx-background-radius: 20;
+
+}
+#lblUserName{
+	-fx-font-size: 14px;
+}
+#lblpassword{
+	-fx-font-size: 14px;
+}
+#btnLogin {
+    -fx-background-radius: 30, 30, 29, 28;
+    -fx-padding: 3px 10px 3px 10px;
+    -fx-background-color:       linear-gradient(orange, orangered );
+}
+
+.TextField {
+		-fx-font-size: 14px;
+        -fx-fill:  linear-gradient(orange , orangered);
+}

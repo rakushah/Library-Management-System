@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="paneMain" prefHeight="490.0" prefWidth="639.0" stylesheets="@../../bin/application/CSS/AddEditForm.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AuthurDataSelectionControlller">
+	<top>
+		<Text fx:id="lblHeading" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Author of the book" BorderPane.alignment="CENTER" />
+	</top>
+	<bottom>
+		<HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="619.0" spacing="20.0" stylesheets="@../../bin/application/CSS/AddEditForm.css" BorderPane.alignment="CENTER">
+			<children>
+				<Button mnemonicParsing="false" onAction="#addNewAuthor" text="Add New Author">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin></Button>
+				<Button mnemonicParsing="false" onAction="#addAllSelectedAuthors" prefHeight="25.0" prefWidth="101.0" text="Done" />
+			</children>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+		</HBox>
+	</bottom>
+	<center>
+		<TableView fx:id="tableView" prefHeight="401.0" prefWidth="471.0" BorderPane.alignment="CENTER">
+			<columns>
+				<TableColumn fx:id="colSn" prefWidth="75.0" text="S.No" />
+				<TableColumn fx:id="colFirstName" prefWidth="75.0" text="FirstName" />
+				<TableColumn fx:id="colLastName" prefWidth="75.0" text="LastName" />
+				<TableColumn fx:id="colCredentials" prefWidth="75.0" text="Credentials" />
+				<TableColumn fx:id="colPhone" prefWidth="75.0" text="Phone" />
+				<TableColumn fx:id="colAddress" prefWidth="95.0" text="Address" />
+			</columns>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+		</TableView>
+	</center>
+   <right>
+      <VBox prefHeight="423.0" prefWidth="168.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Authors" wrappingWidth="164.13671875">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin></Text>
+            <ListView fx:id="listView" prefHeight="427.0" prefWidth="146.0">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin></ListView>
+         </children>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+</BorderPane>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1250.0" stylesheets="@../../bin/application/CSS/Dashboard.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardController">
+   <top>
+      <Pane fx:id="topPanel" prefHeight="115.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="196.0" layoutY="41.0" prefHeight="51.0" prefWidth="806.0" text="Library Mangement System" textFill="#ee0606">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgIcon" fitHeight="113.0" fitWidth="153.0" layoutX="8.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../bin/application/image/mumicon1.jpg" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+            <Hyperlink layoutX="1181.0" layoutY="90.0" onAction="#logOut" prefHeight="23.0" prefWidth="55.0" text="LogOut" />
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <VBox fx:id="leftPane" prefHeight="485.0" prefWidth="162.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Hyperlink fx:id="bookListHyperlink" onAction="#bookList" text="Book List">
+               <effect>
+                  <Glow />
+               </effect>
+            </Hyperlink>
+            <Hyperlink fx:id="memberListHyperlink" onAction="#memberList" text="Member List">
+               <effect>
+                  <Glow />
+               </effect>
+            </Hyperlink>
+            <Hyperlink fx:id="checkOutRecordHyperlink" onAction="#checkOutRecordList" text="CheckOut Record  List">
+               <effect>
+                  <Glow />
+               </effect>
+            </Hyperlink>
+         </children>
+         <BorderPane.margin>
+            <Insets left="5.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </VBox>
+   </left>
+   <bottom>
+      <HBox fx:id="bottomPane" prefHeight="41.0" prefWidth="1100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Loged in as:" textFill="#e11010" />
+            <Label fx:id="logedInUser" prefHeight="17.0" prefWidth="99.0" text="Label" />
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <right>
+      <AnchorPane id="contentPane" fx:id="contentPane" prefHeight="444.0" prefWidth="1127.0" styleClass="Pane" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="26.0" layoutY="6.0" text="Welcome To Library Management System" textFill="#5a05eb">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets left="5.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </right>
+</BorderPane>

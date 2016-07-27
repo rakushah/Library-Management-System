@@ -1,0 +1,9 @@
+1. CheckIn book is extra feature in our system
+2. To run this project . You need to add jar file of sqlite in java build path. jar file is in lib folder in the project.
+3. We have completed the all the funtional requirements provided to us.
+4. Our group member are:
+
+Raj Kumar Shah
+Nabin Puri
+Deepak Rawal
+Moges Shumaye

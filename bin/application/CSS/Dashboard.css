@@ -1,0 +1,50 @@
+
+.root {
+     -fx-background-color:grey ;
+}
+
+.label {
+}
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+#leftPane{
+	-fx-background-color:aliceblue;
+	 -fx-background-radius: 5.0;
+	 -fx-border-color:blue ; -fx-border-width: 1; -fx-border-style: solid;
+}
+#contentPane{
+	-fx-background-color:lightblue;
+	-fx-background-radius: 5.0;
+	-fx-background-position: center center;
+	-fx-background-repeat: stretch;
+
+	-fx-border-color:blue ; -fx-border-width: 1; -fx-border-style: solid;
+}
+#topPanel{
+	-fx-background-color:whitesmoke;
+	-fx-background-radius: 5.0;
+	-fx-border-color:blue ; -fx-border-width: 1; -fx-border-style: solid;
+}
+#bottomPane{
+	-fx-background-color:grey;
+	-fx-background-radius: 5.0;
+	-fx-border-color:blue ; -fx-border-width: 1; -fx-border-style: solid;
+}
+.button:hover {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+#logedInUser{
+	 -fx-text-fill: blue;
+	 -fx-font-size: 14px;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+}
+
+.Pane{
+	 -fx-background-color:blue;
+}

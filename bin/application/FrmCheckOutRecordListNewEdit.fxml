@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane fx:id="paneMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="800.0" stylesheets="@../../bin/application/CSS/AddEditForm.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CheckOUtRecordListAddNewController">
+   <children>
+      <Label fx:id="lblHeading" layoutX="37.0" layoutY="14.0" text="New Edit ChekoutRecord List" textFill="#3514e0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <VBox fx:id="vboxContent" layoutX="27.0" layoutY="37.0" prefHeight="389.0" prefWidth="750.0" spacing="5.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="525.0" spacing="10.0">
+               <children>
+                  <Label text="Member Id" />
+                  <TextField fx:id="txtMember" onMouseExited="#handleFocusLeaveFromMember" prefHeight="25.0" prefWidth="241.0">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin></TextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="525.0" spacing="10.0">
+               <children>
+                  <Label text="Book ISBN" />
+                  <TextField fx:id="txtBookIsbn" prefHeight="25.0" prefWidth="243.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#handleCheckBookAvailabilityButtonClick" prefHeight="23.0" prefWidth="106.0" text="Check Book" />
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="43.0" prefWidth="675.0" spacing="10.0">
+               <children>
+                  <Label text="Copy Number" />
+                  <ComboBox fx:id="cmbSelectBookCopy" prefHeight="25.0" prefWidth="245.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="670.0" spacing="10.0">
+               <children>
+                  <Label text="Issued Date" />
+                  <DatePicker fx:id="dtpIssuedDate" prefHeight="25.0" prefWidth="251.0">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#handleAddButtonClick" prefHeight="25.0" prefWidth="65.0" text="Add">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="tblAddedCheckOut" prefHeight="219.0" prefWidth="670.0">
+              <columns>
+                <TableColumn fx:id="sno" prefWidth="49.0" text="S.No" />
+                <TableColumn fx:id="book" prefWidth="166.0" text="Book Title" />
+                  <TableColumn fx:id="copyNum" prefWidth="73.0" text="Copy Num" />
+                  <TableColumn fx:id="isbn" prefWidth="67.0" text="ISBN" visible="false" />
+                  <TableColumn fx:id="member" prefWidth="207.0" text="Member Name" />
+                  <TableColumn fx:id="issueDate" prefWidth="154.0" text="Issued Date" />
+                  <TableColumn fx:id="dueDate" prefWidth="95.0" text="Due Date" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+      <Button fx:id="btnCheckOut" layoutX="703.0" layoutY="430.0" mnemonicParsing="false" onAction="#handlecheckOutButtonClick" prefHeight="25.0" prefWidth="74.0" text="CheckOut" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="432.0" style="-fx-background-color: #1E90FF;" stylesheets="@CSS/Login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <BorderPane fx:id="bp" layoutX="66.0" layoutY="71.0" prefHeight="175.0" prefWidth="331.0">
+         <top>
+            <AnchorPane prefHeight="179.0" prefWidth="331.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="lblUserName" layoutX="14.0" layoutY="50.0" text="Username" />
+                  <TextField fx:id="txtUserName" layoutX="82.0" layoutY="46.0" prefHeight="25.0" prefWidth="199.0" promptText="Username" />
+                  <Label fx:id="lblpassword" layoutX="16.0" layoutY="94.0" text="Password" />
+                  <PasswordField fx:id="txtPassWord" layoutX="82.0" layoutY="90.0" prefHeight="25.0" prefWidth="199.0" promptText="Password" />
+                  <Button fx:id="btnLogin" layoutX="211.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleLoginButtonClick" prefHeight="30.0" prefWidth="70.0" text="Login" />
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="66.0" layoutY="14.0" prefHeight="41.0" prefWidth="322.0" text="Library Management System" textAlignment="CENTER" textFill="#2714e0">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <Glow />
+   </effect>
+</AnchorPane>

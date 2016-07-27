@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox fx:id="paneMain" alignment="CENTER" prefHeight="380.0" prefWidth="340.0" spacing="10" stylesheets="@../../bin/application/CSS/AddEditForm.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditMemberController">
+	<children>
+		<Label fx:id="lblHeading" prefHeight="10" text="Please edit member details:">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<GridPane alignment="center" hgap="10" vgap="10">
+			<padding>
+				<Insets bottom="10" left="20" right="20" top="10" />
+			</padding>
+   <children>
+   			<Label text="Member Id:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+   			<TextField fx:id="id" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+   			<Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+   			<TextField fx:id="firstName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+   			<Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+   			<TextField fx:id="lastName" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+   			<VBox id="addressPane" alignment="center" prefHeight="120" prefWidth="300" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+   				<children>
+   					<GridPane alignment="center" hgap="10" vgap="10">
+      <children>
+      						<Label text="Street:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+      						<TextField fx:id="street" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+      						<Label text="City:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+      						<TextField fx:id="city" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+      						<Label text="State:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+      						<TextField fx:id="state" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+      						<Label text="zip:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+      						<TextField fx:id="zip" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      </children>
+                     <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
+   					</GridPane>
+   				</children>
+   			</VBox>
+   			<Label text="Phone Number:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+   			<TextField fx:id="phoneNumber" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+   </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+		</GridPane>
+		<HBox alignment="CENTER" spacing="20">
+			<children>
+				<Button fx:id="saveHandler" onAction="#saveHandler" prefWidth="80" text="Save" />
+				<Button fx:id="cancelHandler" onAction="#cancelHandler" prefWidth="80" text="Cancel" />
+			</children>
+		</HBox>
+	</children>
+</VBox>

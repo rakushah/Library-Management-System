@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="500.0" prefWidth="1100.0" stylesheets="@../../bin/application/CSS/List.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CheckoutRecordListController">
+   <top>
+      <HBox prefHeight="72.0" prefWidth="700.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="126.0" text="Search by Member ID">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txtmemberId" />
+            <Button mnemonicParsing="false" onAction="#handleSearchByMemberButtonClick" prefHeight="23.0" prefWidth="66.0" text="Search" />
+            <Label text="Search by Book" />
+            <TextField fx:id="txtbook" />
+            <Button mnemonicParsing="false" onAction="#handleSearchByBookButtonClick" prefHeight="23.0" prefWidth="77.0" text="Search" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="25.0" />
+         </padding>
+      </HBox>
+   </top>
+   <right>
+      <VBox fx:id="vboxLeftButtons" alignment="TOP_CENTER" prefHeight="418.0" prefWidth="143.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNewButtonClick" prefHeight="25.0" prefWidth="108.0" text="New Checkout">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#handleEditButtonClick" prefHeight="25.0" prefWidth="103.0" text="Edit" />
+            <Button mnemonicParsing="false" onAction="#handleReturnButtonClick" prefHeight="25.0" prefWidth="105.0" text="CheckIn" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="10.0" right="5.0" top="10.0" />
+         </padding>
+      </VBox>
+   </right>
+   <center>
+      <Pane fx:id="tblContainer" prefHeight="450.0" prefWidth="948.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tblCheckOutRecord" layoutX="14.0" layoutY="33.0" prefHeight="394.0" prefWidth="937.0">
+              <columns>
+                <TableColumn fx:id="sno" prefWidth="75.0" text="S.no" />
+                <TableColumn fx:id="book" prefWidth="226.0" text="Book" />
+                <TableColumn fx:id="copyNum" prefWidth="125.0" text="Book Copy Num" />
+                  <TableColumn fx:id="member" prefWidth="209.0" text="MemberId" />
+                  <TableColumn fx:id="issueDate" prefWidth="95.0" text="Issued Date" />
+                  <TableColumn fx:id="dueDate" prefWidth="103.0" text="Due Date" />
+                  <TableColumn fx:id="status" minWidth="0.0" prefWidth="103.0" text="Status" />
+                  <TableColumn fx:id="id" minWidth="0.0" prefWidth="0.0" text="id" />
+
+              </columns>
+            </TableView>
+            <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="139.0" text="CheckOut Record List" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Pane>
+   </center>
+</BorderPane>

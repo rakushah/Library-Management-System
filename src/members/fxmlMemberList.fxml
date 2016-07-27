@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane prefHeight="500.0" prefWidth="1100.0" stylesheets="@../../bin/application/CSS/List.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MemberListController">
+
+	<padding>
+		<Insets bottom="10" left="10" right="10" top="30" />
+	</padding>
+	<top>
+		<HBox fx:id="searchBox" alignment="CENTER_LEFT" spacing="20.0">
+			<children>
+				<TextField fx:id="searchMember" />
+				<Button fx:id="searchByIdBtn" onAction="#searchMemberById" text="Search By Id" />
+				<Button fx:id="searchByNameBtn" onAction="#searchMemberByName" text="Search By Name" />
+			</children>
+         <opaqueInsets>
+            <Insets left="10.0" />
+         </opaqueInsets>
+		</HBox>
+	</top>
+
+	<center>
+		<GridPane fx:id="tblContainer" hgap="10" prefHeight="435.0" prefWidth="1000.0" vgap="10">
+			<padding>
+				<Insets bottom="10" left="25" right="25" top="25" />
+			</padding>
+   <children>
+   			<Label text="Members List" GridPane.columnIndex="0" GridPane.rowIndex="0">
+   				<font>
+   					<Font size="20.0" />
+   				</font>
+   			</Label>
+
+   			<TableView fx:id="tableView" prefHeight="379.0" prefWidth="1000.0" GridPane.rowIndex="1">
+   				<columns>
+   					<TableColumn fx:id="colId" prefWidth="123.0" text="Id">
+					</TableColumn>
+   					<TableColumn fx:id="colFirstName" prefWidth="196.0" text="First Name">
+					</TableColumn>
+   					<TableColumn fx:id="colLastName" prefWidth="191.0" text="Last Name">
+					</TableColumn>
+   					<TableColumn fx:id="colAddress" prefWidth="221.0" text="Address">
+					</TableColumn>
+					<TableColumn fx:id="colPhoneNumber" prefWidth="145.0" text="Phone Number">
+					</TableColumn>
+   				</columns>
+   			</TableView>
+   			<VBox id="buttons" fx:id="vboxLeftButtons" alignment="TOP_LEFT" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="1">
+   				<children>
+   					<Button onAction="#newMemberListener" prefWidth="100" text="Add New" />
+   					<Button fx:id="editMemberbtn" onAction="#editMemberListener" prefWidth="100" text="Edit" />
+   					<Button fx:id="deleteMemberbtn" onAction="#deleteMemberListener" prefWidth="100" text="Delete" />
+   				</children>
+   			</VBox>
+
+   </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+		</GridPane>
+	</center>
+
+
+
+</BorderPane>
